@@ -14,7 +14,6 @@ LoginDialog::LoginDialog(QWidget *parent)
 {
     loginPageWidget = new QWidget;
     registerPageWidget = new QWidget;
-    centralWidget = new QWidget;
 
     QString pageButtonCSS =
                 "QPushButton {"
@@ -67,7 +66,7 @@ LoginDialog::LoginDialog(QWidget *parent)
     loginBtnSpacerLayout->addSpacerItem(new QSpacerItem(1, 40));
 
     QHBoxLayout *loginBtnLayout = new QHBoxLayout();
-    QPushButton *loginButton = new QPushButton(tr("Login"), this);
+    QPushButton *loginButton = new QPushButton(tr("&Login"), this);
     loginButton->setMaximumHeight(30);
     loginButton->setFixedHeight(30);
     loginButton->setMaximumWidth(80);

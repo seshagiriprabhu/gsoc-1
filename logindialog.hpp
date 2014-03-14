@@ -5,7 +5,6 @@
 #include <QStackedWidget>
 #include <QWidget>
 #include <QStackedWidget>
-#include <QStackedWidget>
 #include <QPushButton>
 
 class LoginDialog : public QDialog
@@ -15,7 +14,6 @@ class LoginDialog : public QDialog
 private:
     QWidget *loginPageWidget;
     QWidget *registerPageWidget;
-    QWidget *centralWidget;
     QFrame *frame;
     QStackedWidget *stackedWidget;
     QPushButton *existingUser;
