@@ -162,8 +162,8 @@ LoginDialog::LoginDialog(QWidget *parent)
     existingUser->setAutoExclusive(true);
     newUser->setAutoExclusive(true);
 
-    connect(existingUser, &QPushButton::toggled, this, &LoginDialog::login_layout);
-    connect(newUser, &QPushButton::toggled, this, &LoginDialog::register_layout);
+    connect(existingUser, &QPushButton::toggled, this, &LoginDialog::on_sideLoginBtn_clicked);
+    connect(newUser, &QPushButton::toggled, this, &LoginDialog::on_sideRegBtn_clicked);
 
     QVBoxLayout *sideLayout = new QVBoxLayout();
     sideLayout->addWidget(toxLogo);
@@ -195,16 +195,26 @@ LoginDialog::~LoginDialog()
 
 }
 
-void LoginDialog::login_layout(bool checked)
+void LoginDialog::on_sideLoginBtn_clicked(bool checked)
 {
     if (checked == true) {
         stackedWidget->setCurrentWidget(loginPageWidget);
     }
 }
 
-void LoginDialog::register_layout(bool checked)
+void LoginDialog::on_sideRegBtn_clicked(bool checked)
 {
     if (checked == true) {
         stackedWidget->setCurrentWidget(registerPageWidget);
     }
+}
+
+void LoginDialog::on_loginBtn_clicked()
+{
+    // call the login validation function
+}
+
+void LoginDialog::on_regBtn_clicked()
+{
+    // call the registration function
 }

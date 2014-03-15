@@ -20,8 +20,10 @@ private:
     QPushButton *newUser;
 
 private slots:
-    void login_layout(bool checked);
-    void register_layout(bool checked);
+    void on_sideLoginBtn_clicked(bool checked);
+    void on_sideRegBtn_clicked(bool checked);
+    void on_loginBtn_clicked();
+    void on_regBtn_clicked();
 
 public:
     LoginDialog(QWidget *parent = 0);
