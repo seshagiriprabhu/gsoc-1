@@ -4,8 +4,10 @@
 #include <QDialog>
 #include <QStackedWidget>
 #include <QWidget>
-#include <QStackedWidget>
+#include <QLabel>
 #include <QPushButton>
+#include <QLineEdit>
+#include <QComboBox>
 
 class LoginDialog : public QDialog
 {
@@ -18,6 +20,14 @@ private:
     QStackedWidget *stackedWidget;
     QPushButton *existingUser;
     QPushButton *newUser;
+    QPushButton *registerButton;
+    QPushButton *loginButton;
+    QComboBox *userNameCombo;
+    QLineEdit *password;
+    QLineEdit *regUserName;
+    QLineEdit *regPassword;
+    QLabel *loginHint;
+    QLabel *registerHint;
 
 private slots:
     void on_sideLoginBtn_clicked(bool checked);
